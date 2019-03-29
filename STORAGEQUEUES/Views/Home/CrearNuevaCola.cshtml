@@ -1,0 +1,45 @@
+﻿@using Microsoft.WindowsAzure.Storage.Queue;
+@model List<String>
+@{
+    ViewBag.Title = "CrearNuevaCola";
+}
+<h2>Crear Nueva incidencia</h2>
+<br />
+<form method="post">
+   
+        <label>Nombre de la cola</label>
+        <input type="text" name="nombre" />
+
+        <button class="btn-success" type="submit">Enviar</button>
+
+</form>
+<br />
+@if (Model != null)
+{
+    <table class="table table-bordered ">
+        <thead class="alert-info">
+            <tr>
+                <th>
+                    Indicencias
+                </th>
+                <th style="color:red">
+                    Eliminar
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (String m in Model)
+            {
+            <tr>
+                <td style="width:80%">@m.ToString()</td>
+                <td>
+                    @Html.ActionLink("Eliminar", "Deletecola", new { cola = m.ToString() })
+                </td>
+
+            </tr>              
+}
+        </tbody>
+    </table>
+}
+

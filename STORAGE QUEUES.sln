@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STORAGE QUEUES", "STORAGEQUEUES\STORAGE QUEUES.csproj", "{9F673E03-74F4-480B-B350-84E55F145D6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F673E03-74F4-480B-B350-84E55F145D6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F673E03-74F4-480B-B350-84E55F145D6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F673E03-74F4-480B-B350-84E55F145D6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F673E03-74F4-480B-B350-84E55F145D6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {468A2123-D7A1-4162-8E67-317FF6EBF690}
+	EndGlobalSection
+EndGlobal

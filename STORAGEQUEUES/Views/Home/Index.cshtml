@@ -1,0 +1,55 @@
+﻿@using Microsoft.WindowsAzure.Storage.Queue;
+@model List<CloudQueueMessage>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Estado de la incidencia</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Incidencia</label>
+        <select class="form-control" id="exampleFormControlSelect1" name="nombre">
+
+            @foreach (String s in ViewBag.colas)
+            {
+                <option value="@s">@s</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Mensajes</label>
+        <input type="text" class="form-control" placeholder="Contenido a subir" name="mensaje">
+    </div>
+    
+    <button class="btn-success" type="submit">Enviar</button>
+
+</form>
+<br />
+
+@if (Model != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Estado
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+                @foreach (CloudQueueMessage m in Model)
+                {
+                    <tr>
+
+                        <td name="@m.Id">@m.AsString</td>
+                      
+
+                    </tr>
+                }
+            
+        </tbody>
+    </table>
+}
+
+
